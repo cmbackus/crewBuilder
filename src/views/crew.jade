@@ -1,0 +1,34 @@
+extends ./base.jade
+block append style
+    link(rel="stylesheet", type="text/css", href="/assets/style.css")
+block body
+  nav
+    a(href="/login")
+      img#logo(src="/assets/img/face.png", alt="face logo")
+    .navlink
+      a(href="/logout") Log out
+      .navlink
+      a(href="/volmaker") Volunteer View
+  section#makeVol
+    form#volForm(class="volForm", name="volForm", action="/crew", method="POST")
+      label(for="crew") Crew: 
+      input#volCrew(type="text", name="crew", placeholder="vol Crew")
+      a#makevolSubmit(class="makevolSubmit", href="#") Find Crew Members
+  section#vols
+    if !vols || vols.length == 0
+        div.vol
+            h3.emptyvol No vols yet
+    else
+        each val in vols
+            div.vol
+                img(class="domoFace", src="/assets/img/domoface.jpeg", alt="vol face")
+                h3.volName Name: #{val.name}
+                h3.volAge Age: #{val.age}
+                h3.volCrew Crew: #{val.crew}
+  #domoMessage
+    img#speech(src="/assets/img/speech.png", alt="speech box")
+    h3
+      span#errorMessage
+    img#vol(src="assets/img/domo.png", alt="vol")
+block scripts
+        script(src="/assets/crew.js")
