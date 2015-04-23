@@ -34,6 +34,7 @@ nav:nth-child(1) {
     color: white;
     font-size: 1.3em;
     float: left;
+    background-color: #00798B;
 }
 
 .navlink a, .navlink a:link, .navlink a:visited, .navlink a:hover, .navlink a:active {
