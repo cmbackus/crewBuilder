@@ -1,5 +1,5 @@
 {
-  "name": "Crew Builder",
+  "name": "crewbuilder",
   "version": "1.0.0",
   "description": "An mvc project using Node.js, Mongo, Redis and BCrypt",
   "main": "./src/app.js",
@@ -14,7 +14,7 @@
     "Redis",
     "Login"
   ],
-  "author": "Cody Van De Mark",
+  "author": "Charlie Backus",
   "license": "Apache 2.0",
   "dependencies": {
     "body-parser": "^1.9.1",
