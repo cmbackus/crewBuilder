@@ -12,11 +12,19 @@ block body
   section#makeVol
     form#volForm(class="volForm", name="volForm", action="/volmaker", method="POST")
       label(for="name") Name: 
-      input#volName(type="text", name="name", placeholder="vol Name")
-      label(for="age") Age: 
-      input#volAge(type="text", name="age", placeholder="vol Age")
-      label(for="crew") Crew: 
-      input#volCrew(type="text", name="crew", placeholder="vol Crew")
+      input#volFirst(type="text", name="firstName", placeholder="first name")
+      input#volLast(type="text", name="lastName", placeholder="last name")
+      label(for="age") Phone: 
+      input#volAge(type="text", name="phone", placeholder="phone number")
+      label(for="address1") Address: 
+      input(type="text", name="address1", placeholder="address 1")
+      input(type="text", name="address2", placeholder="address 2")
+      label(for="city") City: 
+      input(type="text", name="city", placeholder="city")
+      label(for="state") State: 
+      input(type="text", name="state", placeholder="state")
+      label(for="zip") Zip Code: 
+      input(type="text", name="zip", placeholder="state")
       a#makevolSubmit(class="makevolSubmit", href="#") Add Volunteer
   section#vols
     if !vols || vols.length == 0

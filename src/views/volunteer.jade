@@ -1,0 +1,74 @@
+extends ./base.jade
+block append style
+    link(rel="stylesheet", type="text/css", href="/assets/main.css")
+block body
+  .section#header
+      a(href="/logout") Log out
+      a(href="/crew") Crew View
+  .section#volunteer
+    #vol_info_pic.column
+        img(src='assets/img/heron_default.jpg', width='160px', height='240px')
+    form#volForm(class="volForm", name="volForm", action="/volmaker", method="POST")
+        .column#vol_info_col1
+            label(for="firstName") First Name: 
+            input#volFirst(type="text", name="firstName", placeholder="first name")
+            label(for="lastName") Last Name: 
+            input#volLast(type="text", name="lastName", placeholder="last name")
+            label(for="phone") Phone: 
+            input#volAge(type="text", name="phone", placeholder="phone number")
+            label(for="address1") Address 1: 
+            input(type="text", name="address1", placeholder="address 1")
+            label(for="address2") Address 2: 
+            input(type="text", name="address2", placeholder="address 2")
+            label(for="city") City: 
+            input(type="text", name="city", placeholder="city")
+            label(for="state") State: 
+            input(type="text", name="state", placeholder="state")
+            label(for="zip") Zip Code: 
+            input(type="text", name="zip", placeholder="zip")
+        .column#vol_info_col2
+            label(for="crew") Crew: 
+            input(type="text", name="crew", placeholder="crew")
+            label(for="comments") Comments: 
+            input(type="text", name="comments", placeholder="comments")
+            label(for="age") Birth Year: 
+            input(type="text", name="age", placeholder="birthyear")
+            label(for="yearsHere") Crew: 
+            input(type="text", name="yearsHere", placeholder="years here")
+            label(for="wontmiss") Won't Miss: 
+            input(type="text", name="wontmiss", placeholder="won't miss")
+            label(for="arrivaldeparture") Crew: 
+            input(type="text", name="arrivaldeparture", placeholder="arrival departure")
+            a#makevolSubmit(class="makevolSubmit", href="#")
+                Add Volunteer
+   .section#details
+   .section#schedule
+        #currentSchedule.column
+            h4 Current Schedule
+              | &#x9;&#x9;
+              table
+                tr
+                  td Date
+                  td Time
+                  td Crew
+                tr
+                  td 6/4
+                  td 9am-12pm
+                  td Tickets
+                tr
+                  td 6/5
+                  td 9am-12pm
+                  td Tickets
+
+   section#vols
+    if !vols || vols.length == 0
+        div.vol
+            h3.emptyvol No vols yet
+    else
+        each val in vols
+            div.vol
+                h3.volName Name: #{val.name}
+                h3.volAge Age: #{val.age}
+                h3.volCrew Crew: #{val.crew}
+block scripts
+        script(src="/assets/volmaker.js")

@@ -15,7 +15,7 @@ var router = function(app) {
     app.post("/volmaker", mid.requiresLogin,  controllers.Vol.make);
     app.post("/crew", mid.requiresLogin,  controllers.Crew.make);
     app.get("/crew", mid.requiresLogin, controllers.Crew.makerPage);
-    app.post("/volmaker", mid.requiresLogin,  controllers.Vol.make);
+    app.get("/volunteer", mid.requiresLogin,  controllers.Vol.volunteerPage);
     app.get("/", mid.requiresSecure, controllers.Account.loginPage);
 };
 

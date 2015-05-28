@@ -11,11 +11,22 @@ var makerPage = function(req, res) {
             console.log(err);
             return res.status(400).json({error:'An error occurred'}); 
         }
-        
+        console.log(docs);
         res.render('vols', {vols: docs});
     });
 };
+var volunteerPage = function(req, res) {
 
+    Vol.VolModel.findAll(req.session.account._id, function(err, docs) {
+
+        if(err) {
+            console.log(err);
+            return res.status(400).json({error:'An error occurred'}); 
+        }
+        //console.log(docs);
+        res.render('volunteer', {vols: docs});
+    });
+};
 var makeVol = function(req, res) {
 
     if(!req.body.name || !req.body.age) {
@@ -45,3 +56,4 @@ var makeVol = function(req, res) {
 
 module.exports.makerPage = makerPage;
 module.exports.make = makeVol;
+module.exports.volunteerPage = volunteerPage;

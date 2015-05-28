@@ -1,0 +1,287 @@
+/*volunteer site css 
+#00AFD4
+#00798B
+#B64B00
+#DE8A00
+#FFBD30
+#77553A
+*/
+*{
+margin:0px;
+color:#00798B;
+border-radius:3px;
+font-family:"Open Sans", sans serif
+}
+body{
+margin:0px;
+}
+
+ul{
+display:inline-block;
+margin:auto;
+width:100%;
+padding-top:20px;
+
+}
+
+
+.column{
+display:inline-block;
+vertical-align:top;
+height:350px;
+width:25%;
+padding:20px;
+float:left;
+
+}
+.section{
+	width:90%;
+	padding-top:20px;
+	padding-bottom:20px; 
+	padding-left:5%;
+	padding-right:5%;
+	margin:0px;
+	height:400px;
+	background-color:#00AFD4;
+	border-radius:0px;
+	font-size:14pt;
+	padding-top:5px;
+}
+table {
+    width: 100%;
+}
+ /*general text input stylings*/
+ .editable{
+	background:#EAEAEA;	
+	border:1px;
+	padding:5px;
+	margin:3px;
+ }
+input{
+    background:#EAEAEA;	
+	border:1px;
+	padding:5px;
+	margin:3px;
+}
+ #Comments{
+ max-height:100px;
+ overflow-y:scroll;
+ }
+/*section styles*/
+/*header styles*/
+#header{
+	height:100px;
+	background-color:#00798B;
+}
+#header h3{
+	color:white;
+}
+/*end header styles */
+/*overview styles*/
+#overview{
+	color:#00AFD4;
+	background-color:#ffffff;
+}
+#overview h1{
+color:#ffffff;
+}
+
+#overview li{
+	color:#00798B;
+	list-style:none;
+	text-align:center;
+	display:inline-block;
+	margin:3%;
+	padding:5%;
+	vertical-align:top;
+	width:15%;
+	height:100px;
+	background-color:#00AFD4;
+	border-radius:30px/10px;
+}
+#overview  a{
+	text-decoration:none;
+	}
+
+/*end overview styles*/
+/*crew styles*/
+#crew{
+	color:#ffffff;
+	font-style:bold;
+	
+}
+#crew p{
+display:inline;
+vertical-align:top;
+}
+.crewlist{
+	height:375px;
+	width:25%;
+	overflow-y:scroll;
+	overflow-x:hidden;
+	
+}
+#crew div{
+	color:#ffffff;
+	font-size:16pt;
+}
+.crewlist li{
+	
+	height:25px;
+	background-color:#00798B;
+	color:#ffffff;
+	list-style:none;
+	margin-top:5px;
+	padding:10px;
+}
+.crewlist  ul h3{
+	color:#ffffff;
+}
+
+/*end crew styles*/
+/*Volunteer Styles*/
+#volunteer{
+background-color:#ffffff;
+color:#00798B;
+
+
+}
+#volunteer label {
+    display: inline-block;
+    
+    width:30%;
+    
+}
+
+#volunteer input[type=text] {
+   display:inline-block;
+    clear:right;
+    width:50%;
+}
+
+#volunteer h3{
+color:#00798B;
+}
+#volunteer p{
+display:inline;
+vertical-align:top;
+}
+#volunteer div{
+padding-top:5px;
+
+}
+#vol_info_pic{
+
+width:15%;
+height:150px;
+}
+#vol_info_col1{
+width:25%;
+}
+
+#vol_info_col2{
+width:25%;
+}
+
+#shifts{
+width:40%;
+
+}
+#shifts ul li{
+list-style:none;
+}
+/*End Volunteer Styles*/
+/*(volunteer)Schedule styles*/
+#schedule{
+height:400px;
+width:100%;
+background-color:#d3d3d3;
+}
+#schedule .column{
+text-align:center;
+
+height:350px;
+}
+#schedule ul{
+padding-left:5px;
+
+}
+#schedule ul li{
+	
+	color:#00798B;
+	list-style:none;
+	padding:5px;
+	margin-top:3px;
+}
+#schedule ul li:hover{
+	background-color:#00798B;
+	
+}
+#schedule .selected{
+	background-color:#00798B;
+}
+#currentSchedule{
+	width:40%;
+}
+#addToSchedule{
+	width:45%;
+	text-align:left;
+	
+}
+#addToSchedule div{
+	
+	text-align:left;
+	margin:10px;
+	clear:both;
+}
+
+/*End schedule styles*/
+/*Crew schedule styles*/
+#crew_schedule{
+height:400px;
+background-color:#d3d3d3;
+}
+#crew_schedule .column{
+text-align:center;
+background-color:#ffffff;
+height:350px;
+}
+#crew_schedule ul{
+padding-left:5px;
+}
+#crew_schedule ul li{
+	background-color:#00AFD4;
+	color:#ffffff;
+	list-style:none;
+	padding:5px;
+	margin-top:3px;
+}
+#crew_schedule ul li:hover{
+	background-color:#00798B;
+	
+}
+#crew_schedule .selected{
+	background-color:#00798B;
+}
+/*End crew_schedule styles*/
+
+/*SearchStatus styles */
+#SearchStatus{
+
+height:20px;
+background-color:#00AFD4;
+}
+#SearchStatus ul{
+
+padding-top:0px;
+}
+#SearchStatus li{
+display:inline-block;
+padding-left:10px;
+}
+/*end SearchStatus styles */
+/*end section styles*/
+#search{
+color:black;
+ border-radius:5px;
+}
